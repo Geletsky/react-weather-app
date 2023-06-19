@@ -1,0 +1,44 @@
+.currentWidget {
+	display: inline-block;
+	padding: 20px;
+
+	cursor: pointer;
+
+	background: #FFFFFF;
+	box-shadow: 2px 5px 25px rgba(180, 180, 180, 0.25);
+	border-radius: 20px;
+
+	transition: box-shadow .3s ease;
+
+	&:hover {
+		box-shadow: 2px 5px 25px rgba(180, 180, 180, 0.5);
+	}
+}
+
+.wrapperTop {
+	margin: 0px 0px 10px 0px;
+
+	display: flex;
+	align-items: center;
+	gap: 65px;
+}
+
+.temp {
+	font-weight: 500;
+	font-size: 80px;
+	line-height: 115%;
+	color: #4793FF;
+}
+
+.day {
+	font-size: 40px;
+	line-height: 123%;
+	color: #000000;
+	font-weight: 500;
+}
+
+.city {
+	font-size: 25px;
+	line-height: 120%;
+	color: #939CB0;
+}

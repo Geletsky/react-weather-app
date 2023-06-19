@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
-import { URL, geoApiOptions } from '../../../api/api';
+import { GEOPOSITION_API_URL, geoApiOptions } from '../../../api/api';
 import cl from './Search.module.scss';
 
 export default function Search({ onSearchChange }) {
@@ -29,7 +29,7 @@ export default function Search({ onSearchChange }) {
 	};
 
 	const loadOptions = (inputValue) => {
-		return fetch(`${URL}/cities?namePrefix=${inputValue}`, geoApiOptions)
+		return fetch(`${GEOPOSITION_API_URL}/cities?namePrefix=${inputValue}`, geoApiOptions)
 			.then(response => response.json())
 			.then(response => {
 				return {
