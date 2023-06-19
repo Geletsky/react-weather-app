@@ -3,6 +3,7 @@ import './styles/App.scss';
 import Header from './components/Header/Header';
 import CurrentWeather from './components/CurrentWeather/CurrentWeather';
 import { WEATHER_API_URL } from './api/api';
+import CurrentWeatherDescription from './components/CurrentWeatherDescription/CurrentWeatherDescription';
 
 function App() {
 	const [currentWeather, setCurrentWeather] = useState(null);
@@ -31,7 +32,11 @@ function App() {
 	return (
 		<div className="container">
 			<Header onSearchChange={handleOnSearchChange} />
-			{currentWeather && <CurrentWeather data={currentWeather} />}
+			{currentWeather &&
+				<div style={{ display: 'flex', gap: '50px' }}>
+					<CurrentWeather data={currentWeather} />
+					<CurrentWeatherDescription data={currentWeather} />
+				</div>}
 		</div>
 	);
 }
