@@ -1,11 +1,16 @@
 import React from 'react';
-import './styles/App.scss'
+import './styles/App.scss';
 import Header from './components/Header/Header';
 
 function App() {
+
+	const handleOnSearchChange = (searchData) => {
+		console.log(searchData);
+	}
+
 	return (
 		<div className="container">
-			<Header/>
+			<Header onSearchChange={handleOnSearchChange}/>
 		</div>
 	);
 }
