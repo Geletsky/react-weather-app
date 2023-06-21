@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import CurrentWeather from './components/CurrentWeather/CurrentWeather';
 import { WEATHER_API_URL } from './api/api';
 import CurrentWeatherDescription from './components/CurrentWeatherDescription/CurrentWeatherDescription';
+import Forecast from './components/Forecast/Forecast';
 
 function App() {
 	const [currentWeather, setCurrentWeather] = useState(null);
@@ -26,7 +27,6 @@ function App() {
 			.catch((err) => console.log(err));
 	}
 
-	console.log(currentWeather);
 	console.log(forecastWeather);
 
 	return (
@@ -37,6 +37,7 @@ function App() {
 					<CurrentWeather data={currentWeather} />
 					<CurrentWeatherDescription data={currentWeather} />
 				</div>}
+			{forecastWeather && <Forecast data={forecastWeather} />}
 		</div>
 	);
 }
