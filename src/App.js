@@ -5,6 +5,7 @@ import CurrentWeather from './components/CurrentWeather/CurrentWeather';
 import { WEATHER_API_URL } from './api/api';
 import CurrentWeatherDescription from './components/CurrentWeatherDescription/CurrentWeatherDescription';
 import Forecast from './components/Forecast/Forecast';
+import Tabs from './components/UI/Tabs/Tabs';
 
 function App() {
 	const [currentWeather, setCurrentWeather] = useState(null);
@@ -37,7 +38,7 @@ function App() {
 					<CurrentWeather data={currentWeather} />
 					<CurrentWeatherDescription data={currentWeather} />
 				</div>}
-			{forecastWeather && <Forecast data={forecastWeather} />}
+			{forecastWeather && <Tabs data={forecastWeather} />}
 		</div>
 	);
 }

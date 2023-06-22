@@ -1,0 +1,36 @@
+.wrapper {
+	width: 100%;
+	margin: 50px 0px 0px 0px;
+}
+
+.navigation {
+	display: flex;
+	gap: 15px;
+}
+
+.tabsLink {
+	padding: 10px 20px;
+
+	color: #000;
+	font-size: 18px;
+	cursor: pointer;
+
+	border: transparent;
+	border-radius: 5px;
+	background: #FFF;
+	box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.5);
+}
+
+.tabsLink.active {
+	color: #FFF;
+	background: #4793FF;
+}
+
+.item {
+	display: none;
+
+	&.active {
+		display: block;
+		width: 100%;
+	}
+}
