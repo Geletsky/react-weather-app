@@ -2,13 +2,17 @@
 
 ## Description:
 
-This is a web application built with React that allows users to check the weather forecast for different cities using data from the OpenWeatherMap API. The app features a simple and concise design and utilizes the react-select-async-paginate library for the city selection dropdown.
+This is a weather applications built using React that allows users to check the current weather and weather forecast for various cities. The application utilizes the `OpenWeatherMap API` to fetch weather data and the `GeoDB Cities API` to retrieve citynames. Additionally, the `react-select-async-paginate` library is used to enhance the user experience by providing a convenient city search functionality.
 
 ## Features:
 
-- **Weather Forecast:** Get current weather information, including temperature, humidity, wind speed, and weather conditions, for the selected city.
+- **Current Weather:** Displays the current weather conditions for the selected city.
 
-- **City Selection:** Use the dropdown menu with autocomplete suggestions to search and select a city from a vast list of options provided by the `react-select-async-paginate` library.
+- **Detailed Weather Information:** Provides a detailed description of current weather conditions such as pressure, humidity and wind speed.
+
+- **Weather Forecast:** Shows the weather forecast for 3 days, 5 days and 7 days, which allows users to plan ahead. The forecast includes temperature highs and lows, weather descriptions, and icons representing weather conditions.
+
+- **City Selection:** Using the react-select-async-paginate library to improve city selection. Users can easily search for a specific city, and the app will give suggestions as they type.
 
 ## Installation:
 
@@ -30,10 +34,18 @@ REACT_APP_RAPID_API_KEY=<YOUR_RAPID_API_KEY>
 npm start
 ```
 
-## Demo
+## Usage:
+
+By launching the React Weather app, you will see a search bar where you can start entering the name of the city. As you type, the app will issue suggestions based on the GeoDB Cities API. Select a city from the drop-down list to view the current weather and forecast.
+
+The main page will display the current weather conditions for the selected city, including temperature, humidity, wind speed and pressure.
+
+To view the weather forecast for several days, go to the appropriate tabs. Each tab will display the predicted temperatures, weather descriptions, and weather icons for the corresponding time period.
+
+## Demo:
 
 You can access the live demo of this application [here](https://react-weather-app-rust-theta.vercel.app/)
 
-## Author
+## Author:
 
 If you have any questions or suggestions regarding this project, feel free to contact the project owner: [here](https://github.com/Geletsky)
